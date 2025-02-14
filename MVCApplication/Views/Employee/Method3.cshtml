@@ -1,0 +1,26 @@
+﻿*@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Method3</title>
+</head>
+<body>
+    @{
+        var Name = TempData["Name"].ToString();
+        var Age = (int)TempData["Age"];
+    }
+    <table style="font-family:Arial">
+        <tr>
+            <td>Name:</td>
+            <td>@Name</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td>@Age</td>
+        </tr>
+    </table>
+</body>
+</html>
