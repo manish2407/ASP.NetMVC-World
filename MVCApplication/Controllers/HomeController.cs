@@ -61,14 +61,24 @@ namespace MVCApplication.Controllers
         //}
 
         //8. checking Controller by adding model and views in the separate folder and getting data using ViewBag
+        //public ActionResult Index()
+        //{
+        //    EmployeeBusinessLayer employeeBL = new EmployeeBusinessLayer();
+        //    Employee employee = employeeBL.GetEmployeeDetails(102);
+
+        //    ViewBag.Employee = employee;
+        //    ViewBag.Header = "Getting Employee Details using ViewBag";
+        //    return View();
+        //}
+
+        //9. Paasing and retrieving data using Strongly Typed View
         public ActionResult Index()
         {
             EmployeeBusinessLayer employeeBL = new EmployeeBusinessLayer();
             Employee employee = employeeBL.GetEmployeeDetails(102);
 
-            ViewBag.Employee = employee;
-            ViewBag.Header = "Getting Employee Details using ViewBag";
-            return View();
+            ViewBag.Header = "Getting Employee Details using Strongly Typed View";
+            return View(employee);
         }
     }
 }
