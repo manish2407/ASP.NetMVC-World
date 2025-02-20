@@ -43,5 +43,21 @@ namespace AttributeRouting.Controllers
             ViewBag.CourseList = CourseList;
             return View();
         }
+        //Overriding the route prefix attribute in the Attribute Routing
+        //default Route prefixing
+        //[Route("tech/teachers")]
+
+        //using the override Route Prefixing
+        [Route("~/tech/teachers")]
+        public ActionResult GetTeachers()
+        {
+            List<Teacher> teachers = new List<Teacher>()
+            {
+                new Teacher() { Id = 1, Name = "James" },
+                new Teacher() { Id = 2, Name = "Patrik" },
+                new Teacher() { Id = 3, Name = "Smith" }
+            };
+            return View(teachers);
+        }
     }
 }
