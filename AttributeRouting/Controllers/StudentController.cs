@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace AttributeRouting.Controllers
 {
+    [RoutePrefix("Student")]
     public class StudentController : Controller
     {
         static List<Student> students = new List<Student>()
