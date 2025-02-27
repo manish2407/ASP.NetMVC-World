@@ -112,6 +112,7 @@
     <Content Include="Views\Home\MVC.cshtml" />
     <Content Include="Views\Home\WEBAPI.cshtml" />
     <Content Include="Views\Student\GetTeachers.cshtml" />
+    <Content Include="Views\students\GetStudentDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
