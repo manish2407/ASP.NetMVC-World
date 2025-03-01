@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultRouteExampleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\studentsController.cs" />
@@ -113,6 +114,7 @@
     <Content Include="Views\Home\WEBAPI.cshtml" />
     <Content Include="Views\Student\GetTeachers.cshtml" />
     <Content Include="Views\students\GetStudentDetails.cshtml" />
+    <Content Include="Views\DefaultRouteExample\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
