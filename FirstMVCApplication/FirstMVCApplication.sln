@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCApplication", "..\MVCApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeRouting", "..\AttributeRouting\AttributeRouting.csproj", "{0B0959AB-5A1F-4501-AB47-DFAD106A27DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDOperationInMVC", "..\CRUDOperationInMVC\CRUDOperationInMVC.csproj", "{8433B301-4FD8-4DB0-8C7C-ADC35CAE43EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0B0959AB-5A1F-4501-AB47-DFAD106A27DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B0959AB-5A1F-4501-AB47-DFAD106A27DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B0959AB-5A1F-4501-AB47-DFAD106A27DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8433B301-4FD8-4DB0-8C7C-ADC35CAE43EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8433B301-4FD8-4DB0-8C7C-ADC35CAE43EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8433B301-4FD8-4DB0-8C7C-ADC35CAE43EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8433B301-4FD8-4DB0-8C7C-ADC35CAE43EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
