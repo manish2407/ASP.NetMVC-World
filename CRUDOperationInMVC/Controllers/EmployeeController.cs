@@ -16,5 +16,11 @@ namespace CRUDOperationInMVC.Controllers
             List<Employee> empList = dbContext.Employees.ToList();
             return View(empList);
         }
+        public ActionResult Details(int id)
+        {
+            EmployeeDBContext dbContext = new EmployeeDBContext();
+            Employee employee = dbContext.Employees.FirstOrDefault(x => x.EmployeeId == id);
+            return View(employee);
+        }
     }
 }
