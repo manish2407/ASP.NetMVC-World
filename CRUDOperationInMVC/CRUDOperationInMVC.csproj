@@ -107,13 +107,28 @@
       <DependentUpon>EmployeeDataModel.edmx</DependentUpon>
       <LastGenOutput>EmployeeDataModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\NewEmployeeDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewEmployeeDataModel.edmx</DependentUpon>
+      <LastGenOutput>NewEmployeeDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\NewEmployeeDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewEmployeeDataModel.edmx</DependentUpon>
+      <LastGenOutput>NewEmployeeDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\NewEmployeeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>NewEmployeeDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs">
       <DependentUpon>EmployeeDataModel.tt</DependentUpon>
@@ -133,6 +148,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmployeeDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\NewEmployee.cs">
+      <DependentUpon>NewEmployeeDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewEmployeeDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEmployeeDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewEmployeeDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEmployeeDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NewEmployeeDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewEmployeeDataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,9 +177,19 @@
     <Content Include="Models\EmployeeDataModel.edmx.diagram">
       <DependentUpon>EmployeeDataModel.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\NewEmployeeDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewEmployeeDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\NewEmployeeDataModel.edmx.diagram">
+      <DependentUpon>NewEmployeeDataModel.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
+    <Content Include="Views\NewEmployee\Index.cshtml" />
+    <Content Include="Views\NewEmployee\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

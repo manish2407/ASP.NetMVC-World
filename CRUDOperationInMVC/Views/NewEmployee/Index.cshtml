@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CRUDOperationInMVC.Models.NewEmployee>
+@using CRUDOperationInMVC.Models;
+<div style="font-family:Arial">
+    @{
+        ViewBag.Title = "Employee List";
+    }
+    <h2>Employee List</h2>
+    <ul>
+        @foreach (NewEmployee employee in @Model)
+        {
+            <li>@Html.ActionLink(employee.Name, "Details", new { id = employee.EmployeeId })</li>
+        }
+    </ul>
+    @Html.ActionLink("Back to Department List", "Index", "Department")
+</div>

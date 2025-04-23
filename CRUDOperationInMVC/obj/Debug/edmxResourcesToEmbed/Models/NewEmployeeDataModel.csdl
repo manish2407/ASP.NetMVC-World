@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NewEmployees" Relationship="Self.FK__NewEmploy__Depar__5FB337D6" FromRole="Department" ToRole="NewEmployee" />
+  </EntityType>
+  <EntityType Name="NewEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__NewEmploy__Depar__5FB337D6" FromRole="NewEmployee" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK__NewEmploy__Depar__5FB337D6">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="NewEmployee" Type="Self.NewEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NewEmployee">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NewEmployeeDbContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="NewEmployees" EntityType="Self.NewEmployee" />
+    <AssociationSet Name="FK__NewEmploy__Depar__5FB337D6" Association="Self.FK__NewEmploy__Depar__5FB337D6">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="NewEmployee" EntitySet="NewEmployees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
